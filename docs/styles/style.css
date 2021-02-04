@@ -1,45 +1,45 @@
-section{
+.loading{
   display: block;
   margin: 0 auto;
   text-align: center;
  
 }
 
-img{
+.loading img{
   width: 10%;
   animation: up-down 2s infinite;
   margin-top: 12em;
 }
 
-img:nth-child(1){
+.loading img:nth-child(1){
 animation-delay: 0.1s;
 }
 
-img:nth-child(2){
+.loading img:nth-child(2){
   animation-delay: 0.2s;
 }
 
-img:nth-child(3){
+.loading img:nth-child(3){
   animation-delay: 0.3s;
 }
 
-img:nth-child(4){
+.loading img:nth-child(4){
   animation-delay: 0.4s;
 }
 
-img:nth-child(5){
+.loading img:nth-child(5){
   animation-delay: 0.5s;
 }
 
-img:nth-child(6){
+.loading img:nth-child(6){
   animation-delay: 0.6s;
 }
 
-img:nth-child(7){
+.loading img:nth-child(7){
   animation-delay: 0.7s;
 }
 
-img:nth-child(8){
+.loading img:nth-child(8){
   animation-delay: 0.8s;
 }
 
