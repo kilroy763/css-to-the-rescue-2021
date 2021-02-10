@@ -2,23 +2,29 @@
     font-family: 'Staatliches', cursive;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
 }
 
 
+
+
+
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Header  */
-body > header:nth-child(1){
+body > header{
     padding-top: 4em;
     display: block;
     padding-left: 1em;
     background-color:white;
-
-    width: 40em;
+    max-width: 40em;
+    /* margin: 0 auto; */
+    margin-bottom: 2em;
 }
 
 body > header > p {
       text-align: center;
       color: #c1853b;
-      width: 33em;
+      max-width: 33em;
       letter-spacing: 1.2em;
 }
 
@@ -26,86 +32,149 @@ body > header > p > span {
     color: black;
 }
 
-header > h1{
+body > header > h1{
     line-height: 0.9em;
     max-width: 4em;
+    /* font-size: clamp(3rem, 7rem, 10vw); */
     font-size: 7em;
 }
 
-header > h1 > span:nth-child(1){
+body > header > h1 > span:nth-child(1){
     text-align: right;
     display: block;
+    animation-duration: 3s;
+    animation-name: down;
+    animation-delay: -1s;
 }
 
-header > h1 > span:nth-child(2) {
+body > header > h1 > span:nth-child(2) {
     display: block;
     text-align: left;
+    
 }
 
-header > h1 > span:nth-child(3){
+body > header > h1 > span:nth-child(3){
     font-size: 18rem;
+    /* font-size: clamp(6.5rem, 18rem, 25vw); */
     display: block;
     text-align: right;
     position: absolute;
+    /* left: clamp(1.2em, 2.8em, 6em); */
     left: 1.4em;
+    /* top: calc(0.4em + 0.1em); */
+    /* top: clamp(5.5%, 11vh, 18vh); */
     top: 0.4em;
     color: #c1853b;
     mix-blend-mode:multiply;
 }
 
-/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Header  */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Flex  */
 
-h2 {
+main > section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 2em;
+}
+
+section > header,
+section > h2,
+section blockquote {
+    flex: 100vw;
+    text-align: center;
+}
+
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= styling menu  */
+section > header, 
+section > h2{
+    background-color: #c1853b;
+
+}
+
+
+section > header{
+    padding-top: 1.5em;
+    height: 10em;
+    letter-spacing: 1.2em;
+}
+
+section > header > h2 {
+    padding-bottom: m;
+    font-size: 4em;
+    letter-spacing: 0em;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+section > h2 {
+    padding-top: 0.5em;
+    height: 2.5em;
     font-size: 4em;
 }
 
-body {
-    background-color: #c1853b;
+
+section article {
+    width: 400px;
+    min-height: 200px;
+
 }
 
-/* main{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
+blockquote{
+  
+    color: #c1853b;
+    margin: 1em auto;
+    justify-content: center;
+    letter-spacing: 0.2em;
 }
 
-section:nth-child(1) header  {
-    text-align: center;   
+article div {
+    font-size: 1.5em;
+}
+
+section header p {
+    letter-spacing: 1.2 em;
+    animation-duration: 3s;
+    animation-name: reverseslidein;
 }
 
 
-section:nth-child(1) {
-    grid-column-start: 2;
-    grid-column-end: 2;
-}
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= animaties  */
+@keyframes down {
+    from {
+      margin-left: -300%;
+      width: -100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+@keyframes reverseslidein {
+    from {
+      margin-left: -300%;
+      width: -600%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
-
-section:nth-child(2){
-    grid-column-start: 4;
-    grid-column-end: 4;
-}
-
-section:nth-child(3){
-    grid-column-start: 2;
-    grid-column-end: 2;
-}
-
-section:nth-child(4){
-    grid-column-start: 4;
-    grid-column-end: 4;
-}
-
-section:nth-child(5){
-    grid-column-start: 2;
-    grid-column-end: 2;
-}
-
-section:nth-child(6){
-    grid-column-start: 4;
-    grid-column-end: 4;
-}
-
-section:nth-child(7){
-    grid-column-start: 3;
-    grid-column-end: 3;
-} */
