@@ -194,30 +194,51 @@ section header p {
 
   
 article {
-    border-style:solid;
+    /* border-style:solid;
 
-    border-color: #c1853b;
+    border-color: #c1853b; */
     padding: 3em;
+    background-color: rgb(193,133,59, 0.30)
+
 }
 
 article:nth-last-child(-n+2){
     margin-bottom: 1.5em;
 }
-  article div::after {
+  article div:after {
     content: 'euro';
     font-size: 1em;
     padding-left: 0.5em;
 }
-
+article div{
+    text-align: right;
+    padding-top: 1em;
+}
 article:hover{
-    transform: scale(1.3);
+    transform: scale(1.2);
 
 }
 
-section:nth-child(1) article{
+/* section:nth-child(1) article{
     background-image: url(https://foodscene.deliveroo.co.uk/assets/images/blogs/foodscene.deliveroo.co.uk/en/cuisine-inspiration/16ot8aS6ogWOeWdUlvp5Kh-bWBF5ByFzqaVhZrwCG1EU/h_29.interesting_italian_small_plates.jpg?v=1.01);
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(5px);
     -webkit-filter: blur(0px);
-}
+} */
+
+
+label {
+    position: relative;
+  }
+  #example-five-checkbox {
+    display: none;
+  }
+  #example-five-checkbox:checked + #div:after {
+    content: "Hide";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+      }
