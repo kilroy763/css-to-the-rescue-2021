@@ -132,7 +132,7 @@ section > h2 {
 section article {
     width: 400px;
     min-height: 200px;
-
+    transition: all .2s ease
 }
 
 blockquote{
@@ -188,6 +188,7 @@ section header p {
   
     to {
         opacity: 1;
+        
     }
   }
 
