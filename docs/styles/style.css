@@ -3,10 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    max-width: 1600px; 
+    margin: 0 auto;
+    
 }
 
-
+body{
+    animation-duration: 3s;
+    animation-name: show;
+    animation-timing-function:cubic-bezier(.92,-0.03,.44,1.03);
+}
 
 
 
@@ -14,11 +20,14 @@
 body > header{
     padding-top: 4em;
     display: block;
-    padding-left: 1em;
+    margin-left: 10em;
     background-color:white;
     max-width: 40em;
-    /* margin: 0 auto; */
+    margin: 0 0;
     margin-bottom: 2em;
+    /* animation-duration: 3s;
+    animation-name: right;
+    animation-delay: -1s; */
 }
 
 body > header > p {
@@ -35,16 +44,14 @@ body > header > p > span {
 body > header > h1{
     line-height: 0.9em;
     max-width: 4em;
-    /* font-size: clamp(3rem, 7rem, 10vw); */
-    font-size: 7em;
+    font-size: clamp(4rem, 7rem, 10vw);
+    /* font-size: 7em; */
 }
 
 body > header > h1 > span:nth-child(1){
     text-align: right;
     display: block;
-    animation-duration: 3s;
-    animation-name: down;
-    animation-delay: -1s;
+
 }
 
 body > header > h1 > span:nth-child(2) {
@@ -54,18 +61,21 @@ body > header > h1 > span:nth-child(2) {
 }
 
 body > header > h1 > span:nth-child(3){
-    font-size: 18rem;
-    /* font-size: clamp(6.5rem, 18rem, 25vw); */
+    /* font-size: 18rem; */
+    font-size: clamp(8.5rem, 18rem, 25vw);
     display: block;
     text-align: right;
     position: absolute;
-    /* left: clamp(1.2em, 2.8em, 6em); */
-    left: 1.4em;
+    /* left: clamp(1em, 35vw, 5em); */
+    margin-left: max(min(1.3em, 1.3em), 1.4em);
     /* top: calc(0.4em + 0.1em); */
     /* top: clamp(5.5%, 11vh, 18vh); */
-    top: 0.4em;
+    margin-top: -0.55em;
     color: #c1853b;
     mix-blend-mode:multiply;
+    /* animation-duration: 3s;
+    animation-name: left;
+    animation-delay: -1s; */
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Flex  */
@@ -106,7 +116,7 @@ section > header > h2 {
     font-size: 4em;
     letter-spacing: 0em;
     animation-duration: 3s;
-    animation-name: slidein;
+    animation-name: show;
 }
 
 section > h2 {
@@ -137,12 +147,12 @@ article div {
 section header p {
     letter-spacing: 1.2 em;
     animation-duration: 3s;
-    animation-name: reverseslidein;
+    animation-name: show;
 }
 
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= animaties  */
-@keyframes down {
+/* @keyframes right {
     from {
       margin-left: -300%;
       width: -100%;
@@ -153,28 +163,61 @@ section header p {
       width: 100%;
     }
   }
-@keyframes reverseslidein {
+
+  @keyframes left {
     from {
-      margin-left: -300%;
-      width: -600%;
+      margin-left: -100%;
+
     }
   
     to {
-      margin-left: 0%;
-      width: 100%;
+        margin-left: max(min(1.3em, 1.3em), 1.4em);
+    
+    }
+  } */
+
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+  
+    to {
+        opacity: 1;
     }
   }
 
   
-  @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%;
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
+ 
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= article styling  */
+
+  
+article {
+    border-style:solid;
+
+    border-color: #c1853b;
+    padding: 3em;
+}
+
+article:nth-last-child(-n+2){
+    margin-bottom: 1.5em;
+}
+  article div::after {
+    content: 'euro';
+    font-size: 1em;
+    padding-left: 0.5em;
+}
+
+article:hover{
+    transform: scale(1.3);
+
+}
+
+section:nth-child(1) article{
+    background-image: url(https://foodscene.deliveroo.co.uk/assets/images/blogs/foodscene.deliveroo.co.uk/en/cuisine-inspiration/16ot8aS6ogWOeWdUlvp5Kh-bWBF5ByFzqaVhZrwCG1EU/h_29.interesting_italian_small_plates.jpg?v=1.01);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    -webkit-filter: blur(0px);
+}
