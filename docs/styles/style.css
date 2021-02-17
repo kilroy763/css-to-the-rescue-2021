@@ -149,6 +149,7 @@ ul {
   top: 0;
   background-color: rgb(193, 133, 59, 0.5);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   opacity: 0;
   animation-duration: 2s;
   animation-name: show;
