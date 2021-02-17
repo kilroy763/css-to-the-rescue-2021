@@ -24,18 +24,16 @@
 body>header {
   padding-top: 4em;
   display: block;
-
   background-color: white;
   max-width: 60em;
-
-
 }
 
 body>header>p {
+  padding-left: 1.8em;
   text-align: center;
   color: #c1853b;
   width: 35em;
-  font-size: 1.5em;
+  font-size: 1.5vw;
   letter-spacing: 1.2em;
 }
 
@@ -47,38 +45,36 @@ body>header>h1 {
   line-height: 0.9em;
   max-width: 4em;
   text-align: right;
-  font-size: 12em;
-
+  font-size: 12vw;
 }
 
 body>header>h1>span:nth-child(1) {
   text-align: right;
   display: block;
-
 }
 
 body>header>h1>span:nth-child(2) {
   display: block;
   text-align: left;
-
 }
 
 body>header>h1>span:nth-child(3) {
-
   font-size: 2.5em;
   display: block;
   text-align: right;
   position: absolute;
-
   margin-left: max(min(1.3em, 1.3em), 1.4em);
-
   margin-top: -0.55em;
   color: #c1853b;
   mix-blend-mode: multiply;
-
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Flex  */
+
+main{
+  margin-top: 5%;
+}
+
 
 main>section {
   display: flex;
@@ -86,7 +82,7 @@ main>section {
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: center;
-  gap: 2em;
+  gap: 5em;
 }
 
 section>header,
@@ -127,7 +123,7 @@ section>h2 {
 
 
 section article {
-  width: 300px;
+  width: 350px;
   min-height: 125px;
   max-height: 150px;
   transition: all .2s ease
@@ -150,9 +146,7 @@ section header p {
   animation-name: show;
 }
 
-
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= animaties  */
-
 
 @keyframes show {
   from {
@@ -166,11 +160,7 @@ section header p {
   }
 }
 
-
-
-
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= article styling  */
-
 
 article {
   background-color: rgb(193, 133, 59, 0.30);
@@ -192,13 +182,12 @@ article p {
 
 article p {
   position: relative;
-  /* top: -18em; */
   text-align: left;
   width: 65%;
   padding-left: 1em;
   letter-spacing: 0.1em;
   display: none;
-  margin: 0 0 0 0 ;
+  margin: 0 0 0 0;
 }
 
 article h3 {
@@ -208,7 +197,6 @@ article h3 {
 article:nth-last-child(-n+2) {
   margin-bottom: 1.5em;
 }
-
 
 article div {
   text-align: right;
@@ -221,37 +209,26 @@ article div {
   mix-blend-mode: multiply;
 }
 
-
-
 article:hover {
   transform: scale(1.2);
   background-color: rgba(193, 133, 59, 0.6);
 }
 
 article:hover h3 {
-
-opacity: 0.05;
+  opacity: 0.05;
 }
 
 article:hover p {
-
   top: -18em;
   display: block;
 }
 
-article:hover div {
-
-  
-}
-
-
-
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= laadbalkje styling  */
+
 body>div {
   display: block;
   margin: 0 auto;
   text-align: center;
-
 }
 
 body>div h3:nth-child(1) {
@@ -325,3 +302,38 @@ body>div h3 {
 
 
 /* https://codepen.io/edeesims/pen/iGDzk?editors=1100 */
+
+ul {
+  margin-top: 20%;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding:  2em  0 2em  0;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* required */
+  background-color: rgb(193, 133, 59, 0.5);
+  backdrop-filter: blur(10px)
+}
+
+
+ul li a {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: 2em;
+}
+
+ul li{
+  padding: 20px;
+}
+
+ul li a:hover{
+  color: #c1853b;
+
+  transition: all .3s ease;
+
+}
