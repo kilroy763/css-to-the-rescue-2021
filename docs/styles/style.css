@@ -8,7 +8,7 @@
 
 }
 
-main {
+/* main {
   opacity: 0;
   animation-duration: 2s;
   animation-name: show;
@@ -16,7 +16,7 @@ main {
   animation-timing-function: cubic-bezier(.92, -0.03, .44, 1.03);
   animation-fill-mode: forwards;
 
-}
+} */
 
 
 
@@ -26,17 +26,16 @@ body>header {
   display: block;
 
   background-color: white;
-  max-width: 40em;
+  max-width: 60em;
 
-  /* animation-duration: 3s;
-    animation-name: right;
-    animation-delay: -1s; */
+
 }
 
 body>header>p {
   text-align: center;
   color: #c1853b;
-  max-width: 33em;
+  width: 35em;
+  font-size: 1.5em;
   letter-spacing: 1.2em;
 }
 
@@ -47,8 +46,9 @@ body>header>p>span {
 body>header>h1 {
   line-height: 0.9em;
   max-width: 4em;
-  font-size: clamp(4rem, 7rem, 10vw);
-  /* font-size: 7em; */
+  text-align: right;
+  font-size: 12em;
+
 }
 
 body>header>h1>span:nth-child(1) {
@@ -64,21 +64,18 @@ body>header>h1>span:nth-child(2) {
 }
 
 body>header>h1>span:nth-child(3) {
-  /* font-size: 18rem; */
-  font-size: clamp(8.5rem, 18rem, 25vw);
+
+  font-size: 2.5em;
   display: block;
   text-align: right;
   position: absolute;
-  /* left: clamp(1em, 35vw, 5em); */
+
   margin-left: max(min(1.3em, 1.3em), 1.4em);
-  /* top: calc(0.4em + 0.1em); */
-  /* top: clamp(5.5%, 11vh, 18vh); */
+
   margin-top: -0.55em;
   color: #c1853b;
   mix-blend-mode: multiply;
-  /* animation-duration: 3s;
-    animation-name: left;
-    animation-delay: -1s; */
+
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Flex  */
@@ -130,7 +127,7 @@ section>h2 {
 
 
 section article {
-  width: 400px;
+  width: 300px;
   min-height: 125px;
   max-height: 150px;
   transition: all .2s ease
@@ -155,29 +152,6 @@ section header p {
 
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= animaties  */
-/* @keyframes right {
-    from {
-      margin-left: -300%;
-      width: -100%;
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
-
-  @keyframes left {
-    from {
-      margin-left: -100%;
-
-    }
-  
-    to {
-        margin-left: max(min(1.3em, 1.3em), 1.4em);
-    
-    }
-  } */
 
 
 @keyframes show {
@@ -199,15 +173,12 @@ section header p {
 
 
 article {
-  /* border-style:solid;
-    border-color: #c1853b; */
-
   background-color: rgb(193, 133, 59, 0.30);
   padding: 0;
 }
 
 article h3 {
-  font-size: 3em;
+  font-size: 2.6em;
   padding-right: 1.5em;
   width: 100%;
   text-align: right;
@@ -217,13 +188,20 @@ article h3 {
 article p {
   text-align: left;
   letter-spacing: 1em;
-
-  display: none;
 }
 
-article p,
-article h3 {
+article p {
+  position: relative;
+  /* top: -18em; */
+  text-align: left;
+  width: 65%;
+  padding-left: 1em;
+  letter-spacing: 0.1em;
+  display: none;
+  margin: 0 0 0 0 ;
+}
 
+article h3 {
   margin-right: 1.5em;
 }
 
@@ -231,36 +209,42 @@ article:nth-last-child(-n+2) {
   margin-bottom: 1.5em;
 }
 
-/* article div:after {
-    content: 'euro';
-    font-size: 1em;
-    padding-left: 0.5em;
-} */
+
 article div {
   text-align: right;
   font-weight: 900;
   font-size: 12.5em;
-
   position: relative;
   top: -0.55em;
   color: rgba(193, 133, 59, 0.9);
   background-clip: content-box;
   mix-blend-mode: multiply;
-
 }
+
+
 
 article:hover {
   transform: scale(1.2);
-
+  background-color: rgba(193, 133, 59, 0.6);
 }
 
-/* section:nth-child(1) article{
-    background-image: url(https://foodscene.deliveroo.co.uk/assets/images/blogs/foodscene.deliveroo.co.uk/en/cuisine-inspiration/16ot8aS6ogWOeWdUlvp5Kh-bWBF5ByFzqaVhZrwCG1EU/h_29.interesting_italian_small_plates.jpg?v=1.01);
-    background-repeat: no-repeat;
-    background-size: cover;
-    backdrop-filter: blur(5px);
-    -webkit-filter: blur(0px);
-} */
+article:hover h3 {
+
+opacity: 0.05;
+}
+
+article:hover p {
+
+  top: -18em;
+  display: block;
+}
+
+article:hover div {
+
+  
+}
+
+
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= laadbalkje styling  */
 body>div {
@@ -337,37 +321,7 @@ body>div h3 {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-= menu item draaien */
 
-/* section article {
-  width: 30em;
-  perspective: 500px;
-}
 
-section article section {
-  position: absolute;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
 
-section article:hover section{
-  transform: rotateY( 180deg ) ;
-  transition: transform 0.5s;
-}
-
-section article section h3,
-section article section div,
-section article section p {
-  background: white;
-  color: #03446A;
-  text-align: center;
-  border-radius: 5px;
-  backface-visibility: hidden;
-}
-
-section article section p{
-  background: #03446A;
-  color: red;
-  transform: rotateY( 180deg );
-} */
 
 /* https://codepen.io/edeesims/pen/iGDzk?editors=1100 */
