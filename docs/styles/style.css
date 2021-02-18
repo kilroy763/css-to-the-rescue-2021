@@ -5,16 +5,22 @@
   box-sizing: border-box;
   max-width: 1600px;
   margin: 0 auto;
+  scroll-behavior: smooth;
+
+
 }
 
+
+
 main {
-  /* opacity: 0;
+  opacity: 0;
   animation-duration: 2s;
   animation-name: show;
   animation-delay: 4s;
   animation-timing-function: cubic-bezier(.92, -0.03, .44, 1.03);
-  animation-fill-mode: forwards; */
+  animation-fill-mode: forwards;
   margin-top: 5%;
+
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Header  */
