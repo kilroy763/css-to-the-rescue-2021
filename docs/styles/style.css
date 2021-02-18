@@ -8,12 +8,12 @@
 }
 
 main {
-  opacity: 0;
+  /* opacity: 0;
   animation-duration: 2s;
   animation-name: show;
   animation-delay: 4s;
   animation-timing-function: cubic-bezier(.92, -0.03, .44, 1.03);
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
   margin-top: 5%;
 }
 
@@ -217,7 +217,7 @@ article div {
   font-weight: 900;
   font-size: 12.5em;
   position: relative;
-  top: -0.55em;
+  top: -0.59em;
   color: rgba(193, 133, 59, 0.9);
   background-clip: content-box;
   mix-blend-mode: multiply;
@@ -330,4 +330,86 @@ body>a:hover {
     transform: translate(0, 0);
     transform: rotateZ(180deg)
   }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= Print Stylesheet  */
+@media print {
+  body ul,
+  body > div{
+    display: none;
+  }
+
+
+  main section article  {
+    width: 8cm;
+    height: 5cm;
+
+  }
+
+  main section header {
+    margin-top: 0;
+    padding-top: 0;
+    height: 3cm;
+
+  }
+
+  article div {
+    top: -0.59em;
+  }
+
+  article p {
+    display: block;
+    top: -4.4cm;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.2em;
+  }
+
+
+
+  article h3{
+    font-size: 2.5em;
+    text-align: left;
+    padding-left: 0.5em;
+  }
+
+ 
+
+  body > a {
+    display: none;
+  }
+  body header{
+    clear: both;
+    page-break-after: always;
+    margin-top: 30%;
+  }
+
+  body > header >  p {
+    margin-top: 3%;
+  }
+
+  
+
+  main section {
+    gap: 7em;
+    row-gap: 3cm;
+    clear: both;
+    page-break-after: always;
+  }
+
+  article:nth-last-child(-n+2) {
+    margin-bottom: 3cm;
+  }
+
+
+  main section > article:nth-child(5) {
+    page-break-after:always;
+    margin-bottom: 8cm;
+  }
+  
+  blockquote{
+    margin:  -1cm 0 -2cm  0;
+  }
+
+
 }
