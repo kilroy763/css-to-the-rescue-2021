@@ -34,7 +34,7 @@ body>header>p {
   padding-left: 1.8em;
   text-align: center;
   color: #c1853b;
-  width: 30em;
+
   max-width: 1250px;
   font-size: clamp(0.8em, 1.5vw, 4em);
   letter-spacing: 1.2em;
@@ -48,7 +48,7 @@ body>header>h1 {
   line-height: 0.9em;
   max-width: 4em;
   text-align: right;
-  font-size: clamp(4em, 11vw, 14em)
+  font-size: clamp(2em, 11vw, 14em)
 }
 
 body>header>h1>span:nth-child(1) {
@@ -222,7 +222,9 @@ article div {
   font-weight: 900;
   font-size: 12.5em;
   position: relative;
-  top: -0.59em;
+  /* top: -0.59em; */
+  top: 0;
+  margin-top: -0.5em;
   color: rgba(193, 133, 59, 0.9);
   background-clip: content-box;
   mix-blend-mode: multiply;
