@@ -27,7 +27,6 @@ main {
 body>header {
   padding-top: 4em;
   display: block;
-  background-color: white;
   max-width: 60em;
 }
 
@@ -177,7 +176,7 @@ ul li {
 }
 
 ul li a:hover {
-  color: #c1853b;
+  color: rgb(193, 133, 59);
   transition: all .3s ease;
 }
 
@@ -312,7 +311,9 @@ body>a {
 
 body>a:hover {
   background-color: rgb(193, 133, 59);
+  color: black;
 }
+
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= animaties  */
 @keyframes show {
