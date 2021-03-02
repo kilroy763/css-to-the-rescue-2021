@@ -207,6 +207,7 @@ article p {
   letter-spacing: 0.1em;
   display: none;
   margin: 0 0 0 0;
+  margin-top: 5em;
 }
 
 article h3 {
@@ -363,12 +364,12 @@ body>a:hover {
   }
 
   article div {
-    top: -0.59em;
+    top: -0.1em;
   }
 
   article p {
     display: block;
-    top: -4.4cm;
+    top: -3.8cm;
     width: 100%;
     text-align: center;
     letter-spacing: 0.2em;
