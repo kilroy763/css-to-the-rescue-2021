@@ -18,4 +18,4 @@ In de tweede week ben ik begonnen met coderen. Ik heb met de inspiratie die ik h
 
 ## Week 3
 
-In de derde week heb ik veel slagen gemaakt. Hierin heb ik mijn design aangepast. Ik wilde op een hover het vakje van een gerecht laten draaeien. Zodat je hierdoor informatie over het gerecht zag. Dit is niet gelukt en hierdoor heb ik gebruikt gemaakt van opacity op de hover. Ook heb ik in de week gekeken naar print style sheet. Hierdoor kan je de pagina optimaal printen. Zo verander ik dat de hover voor de informatie over de gerechten netjes te zien is op een print. Dan plaats ik ze onder het vakje.
+In de derde week heb ik veel slagen gemaakt. Hierin heb ik mijn design aangepast. Ik wilde op een hover het vakje van een gerecht laten draaien. Zodat je hierdoor informatie over het gerecht zag. Dit is niet gelukt en hierdoor heb ik gebruikt gemaakt van opacity op de hover. Ook heb ik in de week gekeken naar print style sheet. Hierdoor kan je de pagina optimaal printen. Zo verander ik dat de hover voor de informatie over de gerechten netjes te zien is op een print. Dan plaats ik ze onder het vakje.
