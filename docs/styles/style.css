@@ -207,6 +207,7 @@ article p {
   letter-spacing: 0.1em;
   display: none;
   margin: 0 0 0 0;
+  margin-top: 6em;
 }
 
 article h3 {
@@ -365,7 +366,7 @@ body>a:hover {
   }
 
   article div {
-    top: -0.59em;
+    top: -0.1em;
   }
 
   article p {
